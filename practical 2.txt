@@ -1,0 +1,55 @@
+//twodim.java
+package P1;
+class TwoDim(){
+ private int x,y;
+public TwoDim(){
+    x=-1;
+    y=-1;
+  }
+ public TwoDim(int num1,int num2){
+    x=num1;
+    y=num2;
+  }
+//Override
+public String toString(){
+    return "The value of x coordinate is:"+ x +"The value of y coordinate is:"+ y;
+  }
+
+
+}
+
+
+
+
+//threedim.java
+package P2;
+import P1;
+public class ThreeDim extends TwoDim(){
+  private z;
+  public ThreeDim(){
+    super(0,0);
+    this.z=0;
+} 
+ public String toString(){
+    return super.toString()+"the value of z coordibate is:"+z;
+}
+
+ 
+}
+
+
+//main.java
+
+
+package P;
+import P1;
+import P2;
+public class Main(){
+   Twodim ref1;
+   ref1=new TwoDim(1,2);
+   System.out.println(ref1);
+   ref2=new ThreeDim(9,8,7);
+   System.out.println(ref2);
+  
+}
+
